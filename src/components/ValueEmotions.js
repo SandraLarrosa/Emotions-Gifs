@@ -1,4 +1,5 @@
 import React from 'react';
+import '../stylesheets/ValueEmotions.scss'
 
 const ValueEmotions = (props) => {
   const emotionsValue = (ev) => {
@@ -10,49 +11,50 @@ const ValueEmotions = (props) => {
   };
 
   return (
-    <div>
-      <h3 className='question'>What is your name?</h3>
+    <div className='questions'>
+      <h3 className='questions__title'>Write your name</h3>
       <label htmlFor='inputName'>
         <input
           type='text'
           id='inputName'
-          className='name'
+          className='questions__inputName'
           name='user_name'
+          placeholder = 'Name'
           onKeyUp={nameValue}
         ></input>
       </label>
-      <h3 id='title_select' className='question'>
+      <h3 className='questions__title'>
         How do you feel today?
       </h3>
       <label htmlFor='select'>
         <select
           name='select'
           id='select'
-          className='select'
+          className='questions__select'
           onChange={emotionsValue}
         >
-          <option value='Happy' className='option'>
+          <option value='happy' className='option'>
             Happy
           </option>
-          <option value='Sad' className='option'>
+          <option value='sad' className='option'>
             Sad
           </option>
-          <option value='Angry' className='option'>
+          <option value='angry' className='option'>
             Angry
           </option>
-          <option value='In Love' className='option'>
+          <option value='in love' className='option'>
             In Love
           </option>
-          <option value='Tired' className='option'>
+          <option value='tired' className='option'>
             Tired
           </option>
-          <option value='Excited' className='option'>
+          <option value='excited' className='option'>
             Excited
           </option>
-          <option value='Negative' className='option'>
+          <option value='negative' className='option'>
             Negative
           </option>
-          <option value='Positive' className='option'>
+          <option value='positive' className='option'>
             Positive
           </option>
         </select>

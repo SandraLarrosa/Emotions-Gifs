@@ -1,12 +1,13 @@
 import React from 'react';
+import '../stylesheets/PrintGif.scss'
 
 
 const PrintGif = props => {
 
     return (
-        <div id="box_hello" className="boxcontent">
-            <h1 id="hello" className="title">Hello {props.name}</h1>
-            <img id="gif_hello" className="gif" src={`${props.gifs}`} alt="gif"></img>
+        <div className="welcome">
+            <h1 className="welcome__title">Hello, {props.name || 'What is your name?'}</h1>
+            <img className="welcome__gif" src={`${props.gifs}`} alt="gif"></img>
         </div>
     );
 };
