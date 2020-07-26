@@ -10,7 +10,7 @@ const ValueEmotions = (props) => {
     <div>
       <h3 className='question'>What is your name?</h3>
       <label htmlFor='inputName'>
-        <input type='text' className='name' name='user_name'></input>
+        <input type='text' id='inputName' className='name' name='user_name'></input>
       </label>
       <h3 id='title_select' className='question'>
         How do you feel today?
