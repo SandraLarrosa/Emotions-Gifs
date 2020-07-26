@@ -1,16 +1,25 @@
 import React from 'react';
 
 const ValueEmotions = (props) => {
-
   const emotionsValue = (ev) => {
     props.emotions(ev);
+  };
+
+  const nameValue = (ev) => {
+    props.nameUser(ev);
   };
 
   return (
     <div>
       <h3 className='question'>What is your name?</h3>
       <label htmlFor='inputName'>
-        <input type='text' id='inputName' className='name' name='user_name'></input>
+        <input
+          type='text'
+          id='inputName'
+          className='name'
+          name='user_name'
+          onKeyUp={nameValue}
+        ></input>
       </label>
       <h3 id='title_select' className='question'>
         How do you feel today?
@@ -22,28 +31,28 @@ const ValueEmotions = (props) => {
           className='select'
           onChange={emotionsValue}
         >
-          <option value='happy' className='option'>
+          <option value='Happy' className='option'>
             Happy
           </option>
-          <option value='sad' className='option'>
+          <option value='Sad' className='option'>
             Sad
           </option>
-          <option value='angry' className='option'>
+          <option value='Angry' className='option'>
             Angry
           </option>
-          <option value='in love' className='option'>
+          <option value='In Love' className='option'>
             In Love
           </option>
-          <option value='tired' className='option'>
+          <option value='Tired' className='option'>
             Tired
           </option>
-          <option value='excited' className='option'>
+          <option value='Excited' className='option'>
             Excited
           </option>
-          <option value='negative' className='option'>
+          <option value='Negative' className='option'>
             Negative
           </option>
-          <option value='positive' className='option'>
+          <option value='Positive' className='option'>
             Positive
           </option>
         </select>
