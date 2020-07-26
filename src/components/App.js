@@ -11,7 +11,7 @@ function App() {
 
   const searchGif = (value) => {
     fetch(
-      `http://api.giphy.com/v1/gifs/random?tag=emotion-${value}&api_key=NXLgbPLwgfyyYI5r0KBWyB2KB3UA4Zfd`
+      `https://api.giphy.com/v1/gifs/random?tag=emotion-person-${value}&api_key=NXLgbPLwgfyyYI5r0KBWyB2KB3UA4Zfd`
     )
       .then((response) => response.json())
       .then((data) => {
